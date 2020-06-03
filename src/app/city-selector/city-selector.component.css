@@ -1,0 +1,16 @@
+form{
+    color: white;
+    text-align: center;
+}
+
+input{
+    text-align: center;
+}
+
+.mat-input-element {
+    caret-color: white;
+}
+
+.mat-form-field.mat-form-field-invalid .mat-form-field-label {
+    color: #f44336;
+}

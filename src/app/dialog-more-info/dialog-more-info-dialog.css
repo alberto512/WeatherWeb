@@ -1,0 +1,16 @@
+h1{
+    text-align: center;
+    color: blue;
+}
+
+#Title{
+    color: #26759c;
+}
+
+#Content {
+    color: #3498ca;
+}
+
+.Container{
+    display: inline;
+}

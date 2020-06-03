@@ -1,0 +1,38 @@
+div {
+    text-align: center;
+}
+
+.card {
+    margin-top: 7%;
+    width: 15%;
+    display: inline-block;
+}
+
+.mat-card-title {
+    color: #26759c;
+    display: flex;
+}
+
+.mat-card-subtitle {
+    color: #3498ca;
+    text-transform: capitalize;
+    display: flex;
+}
+
+h3 {
+    color: #26759c;
+}
+
+h4 {
+    color: #3498ca;
+}
+
+button {
+    background-color: #26759c;
+    color: white;
+}
+
+img {
+    width: 25%;
+    height: 25%;
+}
