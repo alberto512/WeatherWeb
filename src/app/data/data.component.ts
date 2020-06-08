@@ -23,6 +23,29 @@ export class DataComponent implements OnInit {
       this.data = d;
       this.data.dateSunrise = new Date(this.data.sys.sunrise * 1000)
       this.data.dateSunset = new Date(this.data.sys.sunset * 1000)
+      this.data.rain_bool_1h = false;
+      this.data.rain_bool_3h = false;
+      this.data.snow_bool_1h = false;
+      this.data.snow_bool_3h = false;
+      for (let value in d.rain) {
+        if (value == "1h") {
+          this.data.rain._1h = `${d.rain[value]}`;
+          this.data.rain_bool_1h = true;
+        } else if(value == "3h") {
+          this.data.rain._3h = `${d.rain[value]}`;
+          this.data.rain_bool_3h = true;
+        }
+      }
+
+      for (let value in d.snow) {
+        if (value == "1h") {
+          this.data.snow._1h = `${d.snow[value]}`;
+          this.data.snow_bool_1h = true;
+        } else if(value == "3h") {
+          this.data.snow._3h = `${d.snow[value]}`;
+          this.data.snow_bool_3h = true;
+        }
+      }
       InfoComponent.makeVisible(this.data);
 
       //Weather past and future

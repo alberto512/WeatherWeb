@@ -12,5 +12,13 @@
     <mat-list-item><h4 id=Title>Nubes:</h4><h4 id=Content>&nbsp;&nbsp;{{this.data.clouds.all}}%</h4></mat-list-item>
     <mat-divider></mat-divider>
     <mat-list-item><h4 id=Title>Viento:</h4><h4 id=Content>&nbsp;&nbsp;{{(this.data.wind.speed*3.6).toFixed(2)}} Km/h</h4></mat-list-item>
+    <mat-divider *ngIf="this.data.rain_bool_1h"></mat-divider>
+    <mat-list-item *ngIf="this.data.rain_bool_1h"><h4 id=Title>Lluvia última hora:</h4><h4 id=Content>&nbsp;&nbsp;{{this.data.rain._1h}} mm/m<sup>2</sup></h4></mat-list-item>
+    <mat-divider *ngIf="this.data.rain_bool_3h"></mat-divider>
+    <mat-list-item *ngIf="this.data.rain_bool_3h"><h4 id=Title>Lluvia últimas 3 horas:</h4><h4 id=Content>&nbsp;&nbsp;{{this.data.rain._3h}} mm/m<sup>2</sup></h4></mat-list-item>
+    <mat-divider *ngIf="this.data.snow_bool_1h"></mat-divider>
+    <mat-list-item *ngIf="this.data.snow_bool_1h"><h4 id=Title>Nieve última hora:</h4><h4 id=Content>&nbsp;&nbsp;{{this.data.snow._1h}} mm/m<sup>2</sup></h4></mat-list-item>
+    <mat-divider *ngIf="this.data.snow_bool_3h"></mat-divider>
+    <mat-list-item *ngIf="this.data.snow_bool_3h"><h4 id=Title>Nieve últimas 3 horas:</h4><h4 id=Content>&nbsp;&nbsp;{{this.data.snow._3h}} mm/m<sup>2</sup></h4></mat-list-item>
     </mat-list>
 </mat-dialog-content>
