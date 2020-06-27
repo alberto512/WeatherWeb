@@ -1,0 +1,165 @@
+<h1 mat-dialog-title>Tiempo por horas</h1>
+<mat-dialog-content class="Container">
+    <mat-list>
+        <mat-list-item *ngIf="data.hourly[1].today">
+            <h4 id=Title>{{data.hourly[1].time.toTimeString().substr(0, 5)}}:</h4>
+            <img src = "https://openweathermap.org/img/w/{{data.hourly[1].weather[0].icon}}.png">
+            <h4 id=Content>&nbsp;&nbsp;{{data.hourly[1].temp}}º</h4>
+        </mat-list-item>
+        <mat-divider *ngIf="data.hourly[1].today"></mat-divider>
+
+        <mat-list-item *ngIf="data.hourly[2].today">
+            <h4 id=Title>{{data.hourly[2].time.toTimeString().substr(0, 5)}}:</h4>
+            <img src = "https://openweathermap.org/img/w/{{data.hourly[2].weather[0].icon}}.png">
+            <h4 id=Content>&nbsp;&nbsp;{{data.hourly[2].temp}}º</h4>
+        </mat-list-item>
+        <mat-divider *ngIf="data.hourly[2].today"></mat-divider>
+
+        <mat-list-item *ngIf="data.hourly[3].today">
+            <h4 id=Title>{{data.hourly[3].time.toTimeString().substr(0, 5)}}:</h4>
+            <img src = "https://openweathermap.org/img/w/{{data.hourly[3].weather[0].icon}}.png">
+            <h4 id=Content>&nbsp;&nbsp;{{data.hourly[3].temp}}º</h4>
+        </mat-list-item>
+        <mat-divider *ngIf="data.hourly[3].today"></mat-divider>
+
+        <mat-list-item *ngIf="data.hourly[4].today">
+            <h4 id=Title>{{data.hourly[4].time.toTimeString().substr(0, 5)}}:</h4>
+            <img src = "https://openweathermap.org/img/w/{{data.hourly[4].weather[0].icon}}.png">
+            <h4 id=Content>&nbsp;&nbsp;{{data.hourly[4].temp}}º</h4>
+        </mat-list-item>
+        <mat-divider *ngIf="data.hourly[4].today"></mat-divider>
+
+        <mat-list-item *ngIf="data.hourly[5].today">
+            <h4 id=Title>{{data.hourly[5].time.toTimeString().substr(0, 5)}}:</h4>
+            <img src = "https://openweathermap.org/img/w/{{data.hourly[5].weather[0].icon}}.png">
+            <h4 id=Content>&nbsp;&nbsp;{{data.hourly[5].temp}}º</h4>
+        </mat-list-item>
+        <mat-divider *ngIf="data.hourly[5].today"></mat-divider>
+
+        <mat-list-item *ngIf="data.hourly[6].today">
+            <h4 id=Title>{{data.hourly[6].time.toTimeString().substr(0, 5)}}:</h4>
+            <img src = "https://openweathermap.org/img/w/{{data.hourly[6].weather[0].icon}}.png">
+            <h4 id=Content>&nbsp;&nbsp;{{data.hourly[6].temp}}º</h4>
+        </mat-list-item>
+        <mat-divider *ngIf="data.hourly[6].today"></mat-divider>
+
+        <mat-list-item *ngIf="data.hourly[7].today">
+            <h4 id=Title>{{data.hourly[7].time.toTimeString().substr(0, 5)}}:</h4>
+            <img src = "https://openweathermap.org/img/w/{{data.hourly[7].weather[0].icon}}.png">
+            <h4 id=Content>&nbsp;&nbsp;{{data.hourly[7].temp}}º</h4>
+        </mat-list-item>
+        <mat-divider *ngIf="data.hourly[7].today"></mat-divider>
+
+        <mat-list-item *ngIf="data.hourly[8].today">
+            <h4 id=Title>{{data.hourly[8].time.toTimeString().substr(0, 5)}}:</h4>
+            <img src = "https://openweathermap.org/img/w/{{data.hourly[8].weather[0].icon}}.png">
+            <h4 id=Content>&nbsp;&nbsp;{{data.hourly[8].temp}}º</h4>
+        </mat-list-item>
+        <mat-divider *ngIf="data.hourly[8].today"></mat-divider>
+
+        <mat-list-item *ngIf="data.hourly[9].today">
+            <h4 id=Title>{{data.hourly[9].time.toTimeString().substr(0, 5)}}:</h4>
+            <img src = "https://openweathermap.org/img/w/{{data.hourly[9].weather[0].icon}}.png">
+            <h4 id=Content>&nbsp;&nbsp;{{data.hourly[9].temp}}º</h4>
+        </mat-list-item>
+        <mat-divider *ngIf="data.hourly[9].today"></mat-divider>
+
+        <mat-list-item *ngIf="data.hourly[10].today">
+            <h4 id=Title>{{data.hourly[10].time.toTimeString().substr(0, 5)}}:</h4>
+            <img src = "https://openweathermap.org/img/w/{{data.hourly[10].weather[0].icon}}.png">
+            <h4 id=Content>&nbsp;&nbsp;{{data.hourly[10].temp}}º</h4>
+        </mat-list-item>
+        <mat-divider *ngIf="data.hourly[10].today"></mat-divider>
+
+        <mat-list-item *ngIf="data.hourly[11].today">
+            <h4 id=Title>{{data.hourly[11].time.toTimeString().substr(0, 5)}}:</h4>
+            <img src = "https://openweathermap.org/img/w/{{data.hourly[11].weather[0].icon}}.png">
+            <h4 id=Content>&nbsp;&nbsp;{{data.hourly[11].temp}}º</h4>
+        </mat-list-item>
+        <mat-divider *ngIf="data.hourly[11].today"></mat-divider>
+
+        <mat-list-item *ngIf="data.hourly[12].today">
+            <h4 id=Title>{{data.hourly[12].time.toTimeString().substr(0, 5)}}:</h4>
+            <img src = "https://openweathermap.org/img/w/{{data.hourly[12].weather[0].icon}}.png">
+            <h4 id=Content>&nbsp;&nbsp;{{data.hourly[12].temp}}º</h4>
+        </mat-list-item>
+        <mat-divider *ngIf="data.hourly[12].today"></mat-divider>
+
+        <mat-list-item *ngIf="data.hourly[13].today">
+            <h4 id=Title>{{data.hourly[13].time.toTimeString().substr(0, 5)}}:</h4>
+            <img src = "https://openweathermap.org/img/w/{{data.hourly[13].weather[0].icon}}.png">
+            <h4 id=Content>&nbsp;&nbsp;{{data.hourly[13].temp}}º</h4>
+        </mat-list-item>
+        <mat-divider *ngIf="data.hourly[13].today"></mat-divider>
+
+        <mat-list-item *ngIf="data.hourly[14].today">
+            <h4 id=Title>{{data.hourly[14].time.toTimeString().substr(0, 5)}}:</h4>
+            <img src = "https://openweathermap.org/img/w/{{data.hourly[14].weather[0].icon}}.png">
+            <h4 id=Content>&nbsp;&nbsp;{{data.hourly[14].temp}}º</h4>
+        </mat-list-item>
+        <mat-divider *ngIf="data.hourly[14].today"></mat-divider>
+
+        <mat-list-item *ngIf="data.hourly[15].today">
+            <h4 id=Title>{{data.hourly[15].time.toTimeString().substr(0, 5)}}:</h4>
+            <img src = "https://openweathermap.org/img/w/{{data.hourly[15].weather[0].icon}}.png">
+            <h4 id=Content>&nbsp;&nbsp;{{data.hourly[15].temp}}º</h4>
+        </mat-list-item>
+        <mat-divider *ngIf="data.hourly[15].today"></mat-divider>
+
+        <mat-list-item *ngIf="data.hourly[16].today">
+            <h4 id=Title>{{data.hourly[16].time.toTimeString().substr(0, 5)}}:</h4>
+            <img src = "https://openweathermap.org/img/w/{{data.hourly[16].weather[0].icon}}.png">
+            <h4 id=Content>&nbsp;&nbsp;{{data.hourly[16].temp}}º</h4>
+        </mat-list-item>
+        <mat-divider *ngIf="data.hourly[16].today"></mat-divider>
+
+        <mat-list-item *ngIf="data.hourly[17].today">
+            <h4 id=Title>{{data.hourly[17].time.toTimeString().substr(0, 5)}}:</h4>
+            <img src = "https://openweathermap.org/img/w/{{data.hourly[17].weather[0].icon}}.png">
+            <h4 id=Content>&nbsp;&nbsp;{{data.hourly[17].temp}}º</h4>
+        </mat-list-item>
+        <mat-divider *ngIf="data.hourly[17].today"></mat-divider>
+
+        <mat-list-item *ngIf="data.hourly[18].today">
+            <h4 id=Title>{{data.hourly[18].time.toTimeString().substr(0, 5)}}:</h4>
+            <img src = "https://openweathermap.org/img/w/{{data.hourly[18].weather[0].icon}}.png">
+            <h4 id=Content>&nbsp;&nbsp;{{data.hourly[18].temp}}º</h4>
+        </mat-list-item>
+        <mat-divider *ngIf="data.hourly[18].today"></mat-divider>
+
+        <mat-list-item *ngIf="data.hourly[19].today">
+            <h4 id=Title>{{data.hourly[19].time.toTimeString().substr(0, 5)}}:</h4>
+            <img src = "https://openweathermap.org/img/w/{{data.hourly[19].weather[0].icon}}.png">
+            <h4 id=Content>&nbsp;&nbsp;{{data.hourly[19].temp}}º</h4>
+        </mat-list-item>
+        <mat-divider *ngIf="data.hourly[19].today"></mat-divider>
+
+        <mat-list-item *ngIf="data.hourly[20].today">
+            <h4 id=Title>{{data.hourly[20].time.toTimeString().substr(0, 5)}}:</h4>
+            <img src = "https://openweathermap.org/img/w/{{data.hourly[20].weather[0].icon}}.png">
+            <h4 id=Content>&nbsp;&nbsp;{{data.hourly[20].temp}}º</h4>
+        </mat-list-item>
+        <mat-divider *ngIf="data.hourly[20].today"></mat-divider>
+
+        <mat-list-item *ngIf="data.hourly[21].today">
+            <h4 id=Title>{{data.hourly[21].time.toTimeString().substr(0, 5)}}:</h4>
+            <img src = "https://openweathermap.org/img/w/{{data.hourly[21].weather[0].icon}}.png">
+            <h4 id=Content>&nbsp;&nbsp;{{data.hourly[21].temp}}º</h4>
+        </mat-list-item>
+        <mat-divider *ngIf="data.hourly[21].today"></mat-divider>
+
+        <mat-list-item *ngIf="data.hourly[22].today">
+            <h4 id=Title>{{data.hourly[22].time.toTimeString().substr(0, 5)}}:</h4>
+            <img src = "https://openweathermap.org/img/w/{{data.hourly[22].weather[0].icon}}.png">
+            <h4 id=Content>&nbsp;&nbsp;{{data.hourly[22].temp}}º</h4>
+        </mat-list-item>
+        <mat-divider *ngIf="data.hourly[22].today"></mat-divider>
+
+        <mat-list-item *ngIf="data.hourly[23].today">
+            <h4 id=Title>{{data.hourly[23].time.toTimeString().substr(0, 5)}}:</h4>
+            <img src = "https://openweathermap.org/img/w/{{data.hourly[23].weather[0].icon}}.png">
+            <h4 id=Content>&nbsp;&nbsp;{{data.hourly[23].temp}}º</h4>
+        </mat-list-item>
+        <mat-divider *ngIf="data.hourly[23].today"></mat-divider>
+    </mat-list>
+</mat-dialog-content>

@@ -3,7 +3,7 @@ div {
 }
 
 .card {
-    margin-top: 7%;
+    margin-top: 2%;
     display: inline-block;
 }
 
@@ -29,9 +29,4 @@ h4 {
 button {
     background-color: #26759c;
     color: white;
-}
-
-img {
-    width: 25%;
-    height: 25%;
 }

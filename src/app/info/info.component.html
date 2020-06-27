@@ -1,17 +1,198 @@
-<div id="Info">
-  <mat-card class="card">
-      <mat-card-header>
-        <mat-card-title id="Title"></mat-card-title>
-        <mat-card-subtitle id="Subtitle"></mat-card-subtitle>
-      </mat-card-header>
-      <div id = "Image"></div>
-      <mat-card-content>
-        <h3 id="Temp"></h3>
-        <h4 id="TempMax"></h4>
-        <h4 id="TempMin"></h4>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-raised-button (click)="showMoreInfo()">Más información</button>
-      </mat-card-actions>
-    </mat-card>
+<div id="Wrapper" [hidden]="true">
+  <mat-tab-group id="Tab" animationDuration="800ms" mat-align-tabs="center" dynamicHeight selected-index=0 #Children>
+    <mat-tab label="Hoy">
+      <div id="InfoToday">
+        <mat-card class="card">
+          <mat-card-header>
+            <mat-card-title id="Title"></mat-card-title>
+            <mat-card-subtitle id="Subtitle"></mat-card-subtitle>
+          </mat-card-header>
+          <div class="Image" id="Img"></div>
+          <mat-card-content>
+            <h3 id="Temp"></h3>
+            <h4 id="TempMax"></h4>
+            <h4 id="TempMin"></h4>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button (click)="showForHoursToday()">Por horas</button>
+            <br>
+            <br>
+            <button mat-raised-button (click)="showMoreInfo()">Más información</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Mañana">
+      <ng-template matTabContent>
+        <div id="InfoTomorrow">
+            <mat-card class="card">
+              <mat-card-header>
+                <mat-card-title>{{getTitle()}}</mat-card-title>
+                <mat-card-subtitle>{{getSubtitle(1)}}</mat-card-subtitle>
+              </mat-card-header>
+              <div class = "Image">
+                <img src={{getImage(1)}}>
+              </div>
+              <mat-card-content>
+                <h3>{{getTemp(1)}}º</h3>
+                <h4>Max: {{getTempMax(1)}}º</h4>
+                <h4>Min: {{getTempMin(1)}}º</h4>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-raised-button (click)="showForHoursTomorrow()">Por horas</button>
+                <br>
+                <br>
+                <button mat-raised-button (click)="showMoreInfoFuture(1)">Más información</button>
+              </mat-card-actions>
+            </mat-card>
+        </div>
+      </ng-template>
+    </mat-tab>
+
+    <mat-tab label={{getDay(2)}}>
+      <ng-template matTabContent>
+        <div id="InfoTomorrow">
+            <mat-card class="card">
+              <mat-card-header>
+                <mat-card-title>{{getTitle()}}</mat-card-title>
+                <mat-card-subtitle>{{getSubtitle(2)}}</mat-card-subtitle>
+              </mat-card-header>
+              <div class = "Image">
+                <img src={{getImage(2)}}>
+              </div>
+              <mat-card-content>
+                <h3>{{getTemp(2)}}º</h3>
+                <h4>Max: {{getTempMax(2)}}º</h4>
+                <h4>Min: {{getTempMin(2)}}º</h4>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-raised-button (click)="showMoreInfoFuture(2)">Más información</button>
+              </mat-card-actions>
+            </mat-card>
+        </div>
+      </ng-template>
+    </mat-tab>
+
+    <mat-tab label={{getDay(3)}}>
+      <ng-template matTabContent>
+        <div id="InfoTomorrow">
+            <mat-card class="card">
+              <mat-card-header>
+                <mat-card-title>{{getTitle()}}</mat-card-title>
+                <mat-card-subtitle>{{getSubtitle(3)}}</mat-card-subtitle>
+              </mat-card-header>
+              <div class = "Image">
+                <img src={{getImage(3)}}>
+              </div>
+              <mat-card-content>
+                <h3>{{getTemp(3)}}º</h3>
+                <h4>Max: {{getTempMax(3)}}º</h4>
+                <h4>Min: {{getTempMin(3)}}º</h4>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-raised-button (click)="showMoreInfoFuture(3)">Más información</button>
+              </mat-card-actions>
+            </mat-card>
+        </div>
+      </ng-template>
+    </mat-tab>
+    
+    <mat-tab label={{getDay(4)}}>
+      <ng-template matTabContent>
+        <div id="InfoTomorrow">
+            <mat-card class="card">
+              <mat-card-header>
+                <mat-card-title>{{getTitle()}}</mat-card-title>
+                <mat-card-subtitle>{{getSubtitle(4)}}</mat-card-subtitle>
+              </mat-card-header>
+              <div class = "Image">
+                <img src={{getImage(4)}}>
+              </div>
+              <mat-card-content>
+                <h3>{{getTemp(4)}}º</h3>
+                <h4>Max: {{getTempMax(4)}}º</h4>
+                <h4>Min: {{getTempMin(4)}}º</h4>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-raised-button (click)="showMoreInfoFuture(4)">Más información</button>
+              </mat-card-actions>
+            </mat-card>
+        </div>
+      </ng-template>
+    </mat-tab>
+    
+    <mat-tab label={{getDay(5)}}>
+      <ng-template matTabContent>
+        <div id="InfoTomorrow">
+            <mat-card class="card">
+              <mat-card-header>
+                <mat-card-title>{{getTitle()}}</mat-card-title>
+                <mat-card-subtitle>{{getSubtitle(5)}}</mat-card-subtitle>
+              </mat-card-header>
+              <div class = "Image">
+                <img src={{getImage(5)}}>
+              </div>
+              <mat-card-content>
+                <h3>{{getTemp(5)}}º</h3>
+                <h4>Max: {{getTempMax(5)}}º</h4>
+                <h4>Min: {{getTempMin(5)}}º</h4>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-raised-button (click)="showMoreInfoFuture(5)">Más información</button>
+              </mat-card-actions>
+            </mat-card>
+        </div>
+      </ng-template>
+    </mat-tab>
+    
+    <mat-tab label={{getDay(6)}}>
+      <ng-template matTabContent>
+        <div id="InfoTomorrow">
+            <mat-card class="card">
+              <mat-card-header>
+                <mat-card-title>{{getTitle()}}</mat-card-title>
+                <mat-card-subtitle>{{getSubtitle(6)}}</mat-card-subtitle>
+              </mat-card-header>
+              <div class = "Image">
+                <img src={{getImage(6)}}>
+              </div>
+              <mat-card-content>
+                <h3>{{getTemp(6)}}º</h3>
+                <h4>Max: {{getTempMax(6)}}º</h4>
+                <h4>Min: {{getTempMin(6)}}º</h4>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-raised-button (click)="showMoreInfoFuture(6)">Más información</button>
+              </mat-card-actions>
+            </mat-card>
+        </div>
+      </ng-template>
+    </mat-tab>
+    
+    <mat-tab label={{getDay(7)}}>
+      <ng-template matTabContent>
+        <div id="InfoTomorrow">
+            <mat-card class="card">
+              <mat-card-header>
+                <mat-card-title>{{getTitle()}}</mat-card-title>
+                <mat-card-subtitle>{{getSubtitle(7)}}</mat-card-subtitle>
+              </mat-card-header>
+              <div class = "Image">
+                <img src={{getImage(7)}}>
+              </div>
+              <mat-card-content>
+                <h3>{{getTemp(7)}}º</h3>
+                <h4>Max: {{getTempMax(7)}}º</h4>
+                <h4>Min: {{getTempMin(7)}}º</h4>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-raised-button (click)="showMoreInfoFuture(7)">Más información</button>
+              </mat-card-actions>
+            </mat-card>
+        </div>
+      </ng-template>
+    </mat-tab>
+    
+  </mat-tab-group>
 </div>

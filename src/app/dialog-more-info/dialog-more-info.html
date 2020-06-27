@@ -1,9 +1,9 @@
-<h1 mat-dialog-title>{{data.name}}</h1>
+<h1 mat-dialog-title>{{this.data.name}}</h1>
 <mat-dialog-content class="Container">
   <mat-list>
-    <mat-list-item><h4 id=Title>Humedad:</h4><h4 id=Content>&nbsp;&nbsp;{{data.main.humidity}}%</h4></mat-list-item>
+    <mat-list-item><h4 id=Title>Humedad:</h4><h4 id=Content>&nbsp;&nbsp;{{this.data.main.humidity}}%</h4></mat-list-item>
     <mat-divider></mat-divider>
-    <mat-list-item><h4 id=Title>Sensación térmica:</h4><h4 id=Content>&nbsp;&nbsp;{{data.main.feels_like}}º</h4></mat-list-item>
+    <mat-list-item><h4 id=Title>Sensación térmica:</h4><h4 id=Content>&nbsp;&nbsp;{{this.data.main.feels_like}}º</h4></mat-list-item>
     <mat-divider></mat-divider>
     <mat-list-item><h4 id=Title>Amanecer:</h4><h4 id=Content>&nbsp;&nbsp;{{this.data.dateSunrise.getHours()+1}}:{{this.data.dateSunrise.getMinutes()+1}}</h4></mat-list-item>
     <mat-divider></mat-divider>

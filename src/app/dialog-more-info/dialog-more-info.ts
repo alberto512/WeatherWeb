@@ -4,10 +4,10 @@ import { CurrentData } from '../data/data-structures';
 
 @Component({
   selector: 'app-dialog-more-info',
-  templateUrl: './dialog-more-info-dialog.html',
-  styleUrls: ['./dialog-more-info-dialog.css']
+  templateUrl: './dialog-more-info.html',
+  styleUrls: ['./dialog-more-info.css']
 })
-export class DialogMoreInfoDialog {
+export class DialogMoreInfo {
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: CurrentData) {  }
 

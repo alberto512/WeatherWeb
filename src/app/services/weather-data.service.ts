@@ -23,13 +23,6 @@ export class WeatherDataService {
     );
   }
 
-  getPreviusData(lat: number, lon: number, tm: number): Observable<any> {
-    return this.http.get('https://api.openweathermap.org/data/2.5/onecall/timemachine?lat='+ lat +'&lon='+ lon+'&dt='+ tm +'&appid=a0e4c300d1bd0d77dfe82a3b1a2c8ba9').pipe(
-      retry(3),
-      catchError(this.handleError)
-    );
-  }
-
   getFutureData(lat: number, lon: number) {
     return this.http.get('https://api.openweathermap.org/data/2.5/onecall?lat='+ lat +'&lon='+ lon +'&exclude=current,minutely&appid=a0e4c300d1bd0d77dfe82a3b1a2c8ba9&units=metric&lang=es').pipe(
       retry(3),

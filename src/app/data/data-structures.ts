@@ -57,10 +57,6 @@ export interface CurrentData {
     snow_bool_3h: boolean;
 }
 
-export interface PreviousData {
-
-}
-
 interface Hourly {
     dt: number;
     temp: number;
@@ -73,10 +69,47 @@ interface Hourly {
     wind_deg: number;
     weather: Weather[]
     time: Date;
+    today: boolean;
+    tomorrow: boolean;
 }
 
-interface Daily {
-
+export interface Daily {
+    dt: number;
+    sunrise: number;
+    sunset: number;
+    temp: {
+        morn: number;
+        day: number;
+        eve: number;
+        night: number;
+        min: number;
+        max: number;
+    }
+    feels_like: {
+        morn: number;
+        day: number;
+        eve: number;
+        night: number;
+    }
+    pressure: number;
+    humidity: number;
+    dew_point: number;
+    wind_speed: number;
+    wind_gust: number;
+    wind_deg: number;
+    clouds: number;
+    uvi: number;
+    visibility: number;
+    rain: number;
+    snow: number;
+    weather: Weather[];
+    time: Date;
+    dateSunrise: Date;
+    dateSunset: Date;
+    rain_bool: boolean;
+    snow_bool: boolean;
+    name: String;
+    feels_like_total: number;
 }
 
 export interface FutureData {

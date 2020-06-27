@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>{{data.name}}</h1>
+<mat-dialog-content class="Container">
+  <mat-list>
+    <mat-list-item><h4 id=Title>Humedad:</h4><h4 id=Content>&nbsp;&nbsp;{{data.humidity}}%</h4></mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item><h4 id=Title>Sensación térmica:</h4><h4 id=Content>&nbsp;&nbsp;{{data.feels_like_total}}º</h4></mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item><h4 id=Title>Amanecer:</h4><h4 id=Content>&nbsp;&nbsp;{{data.dateSunrise.getHours()+1}}:{{data.dateSunrise.getMinutes()+1}}</h4></mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item><h4 id=Title>Anochecer:</h4><h4 id=Content>&nbsp;&nbsp;{{data.dateSunset.getHours()+1}}:{{data.dateSunset.getMinutes()+1}}</h4></mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item><h4 id=Title>Nubes:</h4><h4 id=Content>&nbsp;&nbsp;{{data.clouds}}%</h4></mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item><h4 id=Title>Viento:</h4><h4 id=Content>&nbsp;&nbsp;{{(data.wind_speed*3.6).toFixed(2)}} Km/h</h4></mat-list-item>
+    <mat-divider *ngIf="data.rain_bool"></mat-divider>
+    <mat-list-item *ngIf="data.rain_bool"><h4 id=Title>Lluvia:</h4><h4 id=Content>&nbsp;&nbsp;{{data.rain}} mm/m<sup>2</sup></h4></mat-list-item>
+    <mat-divider *ngIf="data.snow_bool"></mat-divider>
+    <mat-list-item *ngIf="data.snow_bool"><h4 id=Title>Nieve:</h4><h4 id=Content>&nbsp;&nbsp;{{data.snow}} mm/m<sup>2</sup></h4></mat-list-item>
+    </mat-list>
+</mat-dialog-content>
